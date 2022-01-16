@@ -1,0 +1,22 @@
+.btn {
+    padding: 1rem;
+    width:9rem;
+    border: 1px outset rgb(43, 35, 35);
+    background-color: black;
+    color: white;
+    border-radius: 16px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: 1rem;
+    outline-offset: 0.2rem;
+    outline: 0.2rem solid white;
+    cursor: pointer;
+}
+
+.btn:active, .btn:hover{
+    border: 1px outset White;
+    background-color: white;
+    color: black;
+    outline: 0.2rem solid rgb(43, 35, 35);
+    cursor: pointer;
+}
