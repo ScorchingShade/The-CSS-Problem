@@ -1,0 +1,21 @@
+.languageList {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    width: 100%;
+}
+
+.four {
+    height: 300px;
+}
+
+.five {
+    height: 300px;
+}
+
+.def {
+    height: 322px;
+}

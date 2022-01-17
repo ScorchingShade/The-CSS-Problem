@@ -1,8 +1,18 @@
 import FlexboxContainer from './components/flexboxContainer';
 import buttonsList  from './components/btnList.js'
 import './App.css'
+import Dropdown from 'react-dropdown';
+import { useState } from 'react';
+
+const options = [
+  'two', 'three', 'four', 'five', 'more'
+];
 
 function App() {
+  const [listType, setListType] = useState('');
+  const dropdownHandler =(e)=>{
+    setListType(e.value);
+  }
   return (
     <div className='container'>
       <div className='problem'>
@@ -16,10 +26,10 @@ function App() {
         <li>If it has 5 items, there should be 2 rows and 3 columns centered and vertically+horizontally aligned</li>
       </ul>
       </div>
-
-      <div>
-        {console.log(buttonsList)}
-        <FlexboxContainer buttonList={buttonsList} listType='two'/>
+      
+      <div className='listContainer'>
+      <Dropdown options={options} onChange={dropdownHandler} value={'two'} placeholder="Select an option"/>  
+        <FlexboxContainer buttonList={buttonsList} listType={listType}/>
       </div>
     </div>
   );

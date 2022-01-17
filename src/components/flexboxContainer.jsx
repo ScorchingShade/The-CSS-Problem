@@ -1,5 +1,7 @@
 import React from "react";
 import ButtonItems from "./buttonItems";
+import clx from 'classnames'
+import styles from './flexboxContainer.module.css'
 
 function FlexboxContainer(props) {
   const { buttonList, listType } = props;
@@ -23,8 +25,19 @@ function FlexboxContainer(props) {
             break;
     }
 
+    const styleCheck =(langLength)=>{
+        if(langLength===5)
+            return styles.five;
+        if(langLength===4)
+            return styles.four;
+        if(langLength>5)
+            return styles.def;
+    }
+
   return (
-    <div>
+    <div  className={clx(
+        styles.languageList, styleCheck(renderList.items.length)
+        )}>
       {renderList.items?.map((item,index) => {
         return (
           <div key={index}>
